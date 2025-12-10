@@ -6,140 +6,48 @@
 <meta name="description" content="Portfolio of Aruzhan Berdirakhym">
 <meta name="author" content="Aruzhan Berdirakhym">
 <title>Portfolio - Aruzhan Berdirakhym</title>
-<link rel="icon" href="logo.png" type="image/png">
+<link rel="icon" href="favicon.png" type="image/png">
 
 <style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #fefefe;
-        color: #333;
-        line-height: 1.6;
-    }
-    a {
-        color: #0288d1;
-        text-decoration: none;
-    }
-    a:hover {
-        text-decoration: underline;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #fefefe; color: #333; line-height: 1.6; }
+    a { color: #0288d1; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
     /* Header & Navigation */
-    header {
-        background-color: #0288d1;
-        color: #fff;
-        padding: 20px 0;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-    .header-container {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 0 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .logo img {
-        display: block;
-        height: 50px;
-    }
-    nav a {
-        margin-left: 20px;
-        font-weight: 500;
-    }
+    header { background-color: #0288d1; color: #fff; padding: 20px 0; position: sticky; top: 0; z-index: 1000; }
+    .header-container { max-width: 1000px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+    .logo img { display: block; height: 50px; }
+    nav a { margin-left: 20px; font-weight: 500; }
 
     /* Hero Section */
-    .hero {
-        background-color: #b2ebf2;
-        text-align: center;
-        padding: 60px 20px;
-    }
-    .hero img {
-        border-radius: 50%;
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        margin-top: 20px;
-        border: 4px solid #0288d1;
-    }
-    .hero h1 {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-    }
-    .hero p {
-        font-size: 1.2rem;
-        margin-top: 5px;
-    }
+    .hero { background-color: #b2ebf2; text-align: center; padding: 60px 20px; }
+    .hero img { border-radius: 50%; width: 200px; height: 200px; object-fit: cover; margin-top: 20px; border: 4px solid #0288d1; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    .hero p { font-size: 1.2rem; margin-top: 5px; }
 
     /* Sections */
-    section {
-        max-width: 1000px;
-        margin: 40px auto;
-        padding: 20px;
-        background-color: #f9f9f9;
-        border-radius: 8px;
-    }
-    section h2 {
-        margin-bottom: 20px;
-        color: #0288d1;
-    }
+    section { max-width: 1000px; margin: 40px auto; padding: 20px; }
+    section h2 { margin-bottom: 20px; color: #0288d1; }
+
+    /* Card styling */
+    .cards-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; }
+    .card { background-color: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); flex: 1 1 300px; }
+    .card img { width: 100%; border-radius: 6px; margin-bottom: 15px; }
+    .card a.button { display: inline-block; background-color: #0288d1; color: #fff; padding: 10px 20px; border-radius: 6px; font-weight: bold; margin-top: 10px; margin-right: 10px; }
+    .card a.button:hover { background-color: #0277bd; }
 
     /* About Me */
-    #about p {
-        margin-bottom: 15px;
-    }
-
-    /* Projects & Course */
-    .card {
-        background-color: #fff;
-        border-radius: 8px;
-        padding: 20px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        margin-bottom: 20px;
-    }
-    .card img {
-        width: 100%;
-        border-radius: 6px;
-        margin-bottom: 15px;
-    }
-    .card a.button {
-        display: inline-block;
-        background-color: #0288d1;
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 6px;
-        font-weight: bold;
-        margin-top: 10px;
-        margin-right: 10px;
-    }
-    .card a.button:hover {
-        background-color: #0277bd;
-    }
+    #about p { margin-bottom: 15px; }
 
     /* Contact */
-    #contact p {
-        margin-bottom: 10px;
-    }
+    #contact p { margin-bottom: 10px; }
 
     /* Responsive */
     @media (max-width: 768px) {
-        .header-container {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        nav {
-            margin-top: 10px;
-        }
-        nav a {
-            display: block;
-            margin: 5px 0;
-        }
+        .header-container { flex-direction: column; align-items: flex-start; }
+        nav { margin-top: 10px; }
+        nav a { display: block; margin: 5px 0; }
     }
 </style>
 </head>
@@ -157,6 +65,7 @@
             <a href="#about">About Me</a>
             <a href="#course">О курсе</a>
             <a href="#next-project">Следующий проект</a>
+            <a href="#weekly-tasks">Еженедельные задания</a>
             <a href="#contact">Contact</a>
         </nav>
     </div>
@@ -166,7 +75,7 @@
 <section id="hero" class="hero">
     <h1>Aruzhan Berdirakhym</h1>
     <p>Web Developer & Information Systems Student</p>
-    <img src="port.jpeg" alt="Portrait of Aruzhan">
+    <img src="portrait.png" alt="Portrait of Aruzhan">
 </section>
 
 <!-- About Me -->
@@ -176,28 +85,38 @@
     <p>I am passionate about creating interactive websites and constantly improving my skills in HTML, CSS, and JavaScript.</p>
 </section>
 
-<!-- Course Section -->
-<section id="course">
-    <h2>О курсе</h2>
-    <div class="card">
-        <h3>Sololearn Web Development</h3>
-        <img src="solo.jpg" alt="Sololearn Certificate">
-        <p>This course covered HTML, CSS, JavaScript, and project building. I successfully completed all exercises and projects.</p>
+<!-- Cards Section -->
+<section class="cards-container">
+
+    <!-- Course Card -->
+    <div class="card" id="course">
+        <h2>О курсе</h2>
+        <img src="certificate.png" alt="Sololearn Certificate" style="max-height:200px; object-fit:contain;">
+        <p>This Sololearn Web Development course covered HTML, CSS, JavaScript, and project building. I successfully completed all exercises and projects.</p>
         <a href="https://www.sololearn.com/certificates/CC-YPRQGR2B" class="button" target="_blank">View Certificate</a>
         <a href="presentation_course.pdf" class="button" target="_blank">View Presentation</a>
-        <a href="https://github.com/aruzhan-berdirakhym" class="button" target="_blank">View All GitHub Assignments</a>
     </div>
-</section>
 
-<!-- Next Project Section -->
-<section id="next-project">
-    <h2>Следующий проект: Study Buddy</h2>
-    <div class="card">
-        <img src="project.png" alt="Study Buddy project screenshot">
+    <!-- Next Project Card -->
+    <div class="card" id="next-project">
+        <h2>Следующий проект: Study Buddy</h2>
+        <img src="studybuddy.png" alt="Study Buddy project screenshot">
         <p>StudyBuddy is an interactive math learning assistant to help students improve their math skills with exercises and instant feedback.</p>
         <a href="https://www.canva.com/design/DAG6Zf2-QXs/V8WBAPhvGQoJl8YY6pHptQ/edit?utm_content=DAG6Zf2-QXs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="button" target="_blank">View Presentation</a>
         <a href="https://github.com/aruzhan-berdirakhym" class="button" target="_blank">View Project on GitHub</a>
     </div>
+
+    <!-- Weekly Tasks Card -->
+    <div class="card" id="weekly-tasks">
+        <h2>Еженедельные задания</h2>
+        <p>Все выполненные задания по неделям курса:</p>
+        <a href="https://aruzhan-berdirakhym.github.io/8-10-2025/" class="button" target="_blank">Task 1</a>
+        <a href="https://aruzhan-berdirakhym.github.io/15-10-2025/" class="button" target="_blank">Task 2</a>
+        <a href="https://aruzhan-berdirakhym.github.io/webcourseproject2/" class="button" target="_blank">Task 3</a>
+        <a href="https://aruzhan-berdirakhym.github.io/26-11-2025/" class="button" target="_blank">Task 4</a>
+        <p style="margin-top:10px;">Полный репозиторий на GitHub: <a href="https://github.com/aruzhan-berdirakhym" target="_blank">View All</a></p>
+    </div>
+
 </section>
 
 <!-- Contact Section -->
@@ -211,4 +130,3 @@
 
 </body>
 </html>
-
