@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Task 09 - 10th Character (Popup)</title></head>
+<body>
+  <h2>Find the 10th Character (Popup Input)</h2>
+  <button id="btn">Enter Text</button>
+
+  <script>
+    document.getElementById("btn").addEventListener("click", () => {
+      const s = prompt("Enter text (at least 10 characters):");
+      if (s === null) return;
+
+      if (s.length < 10) {
+        alert("Need at least 10 characters.");
+      } else {
+        alert(`The 10th character is: ${s.charAt(9)}`);
+      }
+    });
+  </script>
+</body>
+</html>
