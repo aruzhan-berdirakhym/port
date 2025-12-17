@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 10 - Array Loop Display</title>
+</head>
+<body>
+  <h2>Task 10: Store and Display Values Using a Loop</h2>
+  <button id="btn">Enter 5 Values (Popup)</button>
+  <ul id="list"></ul>
+
+  <script>
+    document.getElementById("btn").addEventListener("click", () => {
+      const values = [];
+
+      for (let i = 0; i < 5; i++) {
+        const v = prompt(`Enter value ${i + 1} of 5:`);
+        if (v === null) return;
+        values.push(v);
+      }
+
+      const ul = document.getElementById("list");
+      ul.innerHTML = "";
+
+      for (let i = 0; i < values.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = `Index ${i}: ${values[i]}`;
+        ul.appendChild(li);
+      }
+    });
+  </script>
+</body>
+</html>
